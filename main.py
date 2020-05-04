@@ -52,9 +52,9 @@ def convert_to_pdf(files, path):
 if __name__ == '__main__':
     # path = '/home/vahid/Documents/Steuer_Docs/2019/to_print/04105_BetriebsKosten.pdf'
     # extract_information(path)
-    path = '/home/vahid/Documents/Steuer_Docs/2019/to_print'
-    #img_files = [path + "/" + x for x in os.listdir(path) if x.endswith(".jpg")]
-    #pdf_images = convert_to_pdf(img_files, path)
-    pdf_files = [path + "/" + x for x in os.listdir(path) if x.endswith(".pdf")]
+    path = '/home/vahid/Development/Python/Scanner/output_image'
+    img_files = [path + "/" + x for x in os.listdir(path) if x.endswith(".jpg")]
+    pdf_images = convert_to_pdf(img_files, path)
+    #pdf_files = [path + "/" + x for x in os.listdir(path) if x.endswith(".pdf")]
 
-    merge_pdfs(pdf_files, output=path+'/merged.pdf')
+    #merge_pdfs(pdf_files, output=path+'/merged.pdf')
